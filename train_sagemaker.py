@@ -35,9 +35,9 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     print(args)
-    with open(args.inputs_path, 'rb') as input_file:
+    with open(os.path.join(args.inputs_path, 'inputs.pkl'), 'rb') as input_file:
         X = pickle.load(input_file)
-    with open(args.outputs_path, 'rb') as output_file:
+    with open(os.path.join(args.outputs_path, 'outputs.pkl'), 'rb') as output_file:
         y = pickle.load(output_file)
 
     # # Dataset (XOR)
